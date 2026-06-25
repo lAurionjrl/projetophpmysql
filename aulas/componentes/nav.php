@@ -3,7 +3,7 @@
 
             <!-- Nome do projeto -->
             <a class="navbar-brand fw-bold" href="#">
-                Controle de Estoque
+                Controle de Cadastro
             </a>
 
             <!-- Botão para telas pequenas -->
@@ -33,8 +33,8 @@
                         </a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../aula1/">Aula1</a></li>
-                            <li><a class="dropdown-item" href="../aula2/">Aula2</a></li>
+                            <li><a class="dropdown-item" href="../aula1_variaveis/">Aula1 - Variáveis</a></li>
+                            <li><a class="dropdown-item" href="../aula2/">Aula2 - Operadores</a></li>
                             <li><a class="dropdown-item" href="../aula3/">Aula3</a></li>
                             <li><a class="dropdown-item" href="../aula4/">Aula4</a></li>
                             <li><a class="dropdown-item" href="../aula5/">Aula5</a></li>

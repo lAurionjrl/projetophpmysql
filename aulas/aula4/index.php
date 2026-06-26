@@ -1,3 +1,4 @@
+<?php require_once dirname(__DIR__). '/componentes/rotas.php';?>
 <!doctype html>
 <html lang="en" data-bs-theme="light">
 
@@ -17,11 +18,10 @@
 
 <body>
 
-    <!-- nav -->
-    <?php $numaula = 'Aula 4';?> 
-    <?php require_once '../componentes/nav.php'?>
-
-    <?php require_once '../componentes/header.php'?>
+   <!-- nav -->
+    <?php $numaula = "Aula 3-ROTAS (caminhos)";?> 
+    <?php require_once APP_COMPONENTES. '/nav.php';?>
+    <?php require_once APP_COMPONENTES. '/header.php';?>
     <main>
 
         <div class="container">
@@ -32,7 +32,7 @@
 
     </main>
     <!-- footer -->
-     <?php require_once '../componentes/footer.php'?>
+     <?php require_once APP_COMPONENTES. '/footer.php';?>
 
     <!-- Bootstrap JavaScript Bundle (includes Popper) -->
     <script

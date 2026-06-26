@@ -1,3 +1,4 @@
+<?php require_once dirname(__DIR__). '/componentes/rotas.php';?>
 <!doctype html>
 <html lang="en" data-bs-theme="light">
 
@@ -18,10 +19,78 @@
 <body>
 
     <!-- nav -->
-    <?php $numaula = 'Aula 1 - Variáveis'; ?>
-    <?php require_once '../componentes/nav.php' ?>
+    <?php $numaula = "Aula 1-Variáveis";?> 
+    <?php require_once APP_COMPONENTES. '/nav.php';?>
+    <?php require_once APP_COMPONENTES. '/header.php';?>
 
-    <?php require_once '../componentes/header.php' ?>
+    <main>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+                <?php 
+
+                $nome = "Paula Lins";
+                $valor = "100";
+                $moeda = "15.59";
+                $status = "true";
+                $nulo = "Null";
+                $dados = ["Antônio", 10, 15.25, true ];
+                ?>
+
+                <p>
+                    Nome <br>
+                    <?php var_dump($nome); ?>
+                </p>
+                
+                <p>
+                    Valor<br>
+                    <?php var_dump($valor); ?>
+                </p>
+
+                <p>
+                    Moeda<br>
+                    <?php var_dump($moeda); ?>
+                </p>
+                
+                <p>
+                    Status<br>
+                    <?php var_dump($status); ?>
+                </p>
+                
+                <p>
+                    Null<br>
+                    <?php var_dump($nulo); ?>
+                </p>
+
+                <p>
+                    Array<br>
+                    <?php var_dump($dados); ?>
+                </p>
+
+                <h1>Operadores</h1>
+                <?php
+                    $valor1 = 1250;
+                    $valor2 = 15;
+
+                    // $valor1 = number_format($valor1, 2,',','.');
+                ?>
+                <h3>Soma</h3>
+                <?php $total = $valor1 + $valor2;     ?>
+                A soma de <?php echo number_format($valor1, 2,',','.'); ?> + é igual a :
+                
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
     <main>
 
         <div class="container">
@@ -232,7 +301,7 @@
 
       </main>
     <!-- footer -->
-    <?php require_once '../componentes/footer.php' ?>
+    <?php require_once APP_COMPONENTES. '/footer.php';?>
 
     <!-- Bootstrap JavaScript Bundle (includes Popper) -->
     <script

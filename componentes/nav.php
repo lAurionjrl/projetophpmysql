@@ -1,8 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
 
             <!-- Nome do projeto -->
-            <a class="navbar-brand fw-bold" href="../../">
+            <a class="navbar-brand fw-bold" href="#">
                 Controle de Estoque
             </a>
 
@@ -29,16 +30,13 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button"
                             data-bs-toggle="dropdown">
-                            Aulas
+                            Mais
                         </a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../aula1_variaveis/">Aula1 - Variáveis</a></li>
-                            <li><a class="dropdown-item" href="../aula2/">Aula2 - Operadores</a></li>
-                            <li><a class="dropdown-item" href="../aula3/">Aula3</a></li>
-                            <li><a class="dropdown-item" href="../aula4/">Aula4</a></li>
-                            <li><a class="dropdown-item" href="../aula5/">Aula5</a></li>
-                            
+                            <li><a class="dropdown-item" href="#">Categorias</a></li>
+                            <li><a class="dropdown-item" href="#">Fornecedores</a></li>
+                            <li><a class="dropdown-item" href="#">Relatórios</a></li>
                         </ul>
                     </li>
 

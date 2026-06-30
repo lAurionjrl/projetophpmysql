@@ -1,3 +1,4 @@
+<?php require_once __DIR__. '/componentes/rotas.php';?>
 <!doctype html>
 <html lang="pt-BR">
 
@@ -14,62 +15,14 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-
-            <!-- Nome do projeto -->
-            <a class="navbar-brand fw-bold" href="#">
-                Controle de Estoque
-            </a>
-
-            <!-- Botão para telas pequenas -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#menuNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Menu -->
-            <div class="collapse navbar-collapse" id="menuNavbar">
-
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Início</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Produtos</a>
-                    </li>
-
-                    <!-- Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button"
-                            data-bs-toggle="dropdown">
-                            Mais
-                        </a>
-
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Categorias</a></li>
-                            <li><a class="dropdown-item" href="#">Fornecedores</a></li>
-                            <li><a class="dropdown-item" href="#">Relatórios</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-
-            </div>
-        </div>
-    </nav>
+     <?php require_once APP_COMPONENTES.'/nav.php'; ?>
 
     <!-- Header -->
-    <header class="bg-light py-5 text-center">
-        <div class="container">
-            <h1>Controle de Estoque</h1>
-            <p class="lead">
-                Sistema para gerenciamento de produtos, fornecedores e movimentação de estoque.
-            </p>
-        </div>
-    </header>
+     <?php require_once APP_COMPONENTES.'/header.php'; ?>
+
+
+    
+   
 
     <!-- Section -->
     <section class="container my-4">
@@ -83,7 +36,7 @@
     <main class="container my-5">
 
         <div class="row">
-
+            
             <div class="col-md-4">
                 <div class="card shadow-sm">
                     <div class="card-body">
@@ -125,13 +78,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <div class="container">
-            <p class="mb-0">
-                &copy; 2026 - Controle de Estoque. Todos os direitos reservados.
-            </p>
-        </div>
-    </footer>
+     <?php require_once APP_COMPONENTES.'/footer.php'; ?>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>

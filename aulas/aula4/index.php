@@ -39,9 +39,9 @@
                         <?php
 
                         if ($valor == 100) {
-                            echo " Valor " . $valor . " é igual a 100";
+                            echo " Valor " . $valor . " é igual a 100 ";
                         } else {
-                            echo " Valor " . $valor . " não é igual a 100";
+                            echo " Valor " . $valor . " não é igual a 100 ";
                         }
 
                         ?>
@@ -54,9 +54,9 @@
                         <?php
 
                         if ($valor > 100) {
-                            echo " Valor " . $valor . " é maior do que 100";
+                            echo " Valor " . $valor . " é maior do que 100 ";
                         } else {
-                            echo " Valor " . $valor . " não é maior do que 100";
+                            echo " Valor " . $valor . " não é maior do que 100 ";
                         }
 
                         ?>
@@ -100,25 +100,152 @@
 
                     <h4>if e else if</h4>
 
-                    <?php 
-                    $media = 5; 
+                    <?php
+                    $media = 5;
                     ?>
 
-                     <p>
+                    <p>
                         <?php
 
                         if ($media >= 7) {
                             echo " Aprovado " . $media . " é igual a 7";
-
                         } else if ($media >= 4) {
                             echo " Recuperação " . $media . " maior igual a 7";
-                        }
-                        else {
+                        } else {
                             echo "Reprovado " . $media . " menor do que 7";
                         }
                         ?>
 
                     </p>
+
+                <p>
+                    <h4>Desafio 1</h4>
+
+                    <h2>Verificação de Maioridade</h2>
+
+                    <?php
+                    $nome = "Carlos Moura";
+                    $idade = 20;
+
+                    if ($idade >= 18) {
+                        echo "<div class='alert alert-success'>";
+                        echo "$nome possui $idade anos. Acesso permitido.";
+                        echo "</div>";
+                    } else {
+                        echo "<div class='alert alert-danger'>";
+                        echo "$nome possui $idade anos. Acesso negado.";
+                        echo "</div>";
+                    }
+                    ?>
+
+                    <a href="?idade=1" class="btn btn-success btn-sm">
+                        Acesso Permitido
+                    </a>
+
+                    <a href="?idade=2" class="btn btn-danger btn-sm">
+                        Acesso Negado 
+                    </a>
+
+                    <?php
+                    if (!empty($_GET['idade'])) {
+
+                        if ($_GET['idade'] == 18) {
+                            echo '<div class="alert alert-success mt-3">
+                                    Serviço ativado com sucesso!
+                                    </div>';
+                            } else {
+                            echo '<div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                                    Serviço desativado.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                     </div>';
+
+                                            }
+                                        }
+
+                    ?>
+
+                </p>
+
+
+                 <p>
+                    <h4>Desafio 2</h4>
+
+                    <h2>Aprovação por média</h2>
+
+                    <?php
+                    $aluno = "Eduarda Diaz";
+                    $media = 7;
+
+                    if ($media >= 7) {
+                        echo "<div class='alert alert-success'>";
+                        echo "$aluno possui $media anos. Aluno aprovado.";
+                        echo "</div>";
+                    } else {
+                        echo "<div class='alert alert-danger'>";
+                        echo "$nome possui $media . Aluno reprovado.";
+                        echo "</div>";
+                    }
+                    ?>
+
+                    <a href="?media=1" class="btn btn-success btn-sm">
+                        Aprovado
+                    </a>
+
+                    <a href="?media=2" class="btn btn-danger btn-sm">
+                        Reprovado
+                    </a>
+
+                    <?php
+                    if (!empty($_GET['media'])) {
+
+                        if ($_GET['media'] == 18) {
+                            echo '<div class="alert alert-success mt-3">
+                                    Serviço ativado com sucesso!
+                                    </div>';
+                            } else {
+                            echo '<div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                                    Serviço desativado.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                     </div>';
+
+                                            }
+                                        }
+
+                    ?>
+
+                </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                 </div>

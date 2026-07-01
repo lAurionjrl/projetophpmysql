@@ -1,3 +1,4 @@
+<?php require_once dirname(__DIR__) . '/componentes/rotas.php'; ?>
 <!doctype html>
 <html lang="en" data-bs-theme="light">
 
@@ -17,25 +18,109 @@
 
 <body>
 
-    <!-- nav -->
-    <?php $numaula = 'Aula 5';?> 
-    <?php require_once '../componentes/nav.php'?>
+    <?php $numaula = "Aula 5"; ?>
 
-    <?php require_once '../componentes/header.php'?>
+    <!-- nav -->
+    <?php require_once APP_COMPONENTES . '/nav.php'; ?>
+
+    <!-- haeder-->
+    <?php require_once APP_COMPONENTES . '/header.php'; ?>
+
     <main>
 
         <div class="container">
             <div class="row">
                 <div class="col-12">
+                    <h3>Uso for</h3>
 
-                <?php  
-                
-                
-                
-                
-                
-                ?>
+                    <form method="post" class="card card-body shadow-sm mb-4">
+                        <h4>Input number + botão</h4>
 
+                        <div class="input-group">
+                            <input
+                                type="number"
+                                class="form-control"
+                                id="quantidade"
+                                name="quantidade"
+                                min="0"
+                                placeholder="Digite a quantidade">
+
+                            <button type="submit" class="btn btn-success">
+                                Atualizar estoque
+                            </button>
+                        </div>
+                    </form>
+
+                    <?php
+
+                    $quant = "0";
+
+                    if (!empty($_POST['quantidade'])) {
+                        $quant = $_POST['quantidade'];
+                    }
+
+                    for ($i = 1; $i <= $quant; $i++) {
+                        echo '<div class="card">
+                                <div class="card-header">
+                                Módulo 1
+                             </div>
+                                <div class="card-body">
+                                <h5 class="card-title">Introdução ao Bootstrap</h5>
+                                <p class="card-text">Aprenda a montar layouts responsivos.</p>
+                             </div>
+                                <div class="card-footer text-body-secondary">
+                                Atualizado hoje
+                             </div>
+                            </div>
+                            ';
+                            
+                    }
+
+                    ?>
+
+                    <h4>For com array</h4>
+
+                    <?php 
+                    $dados = [
+                        "PHP",
+                        "MYSQL",
+                        "JAVA",
+                        "PYTHON",
+                        "CSS",
+                        "HTML"
+                    ];
+
+                    $descricao =[
+                        "Linguagem de Programação",
+                        "Banco de dados",
+                        "Linguagem de Programação",
+                        "Linguagem de Programação",
+                        "Estrutura de Formatção",
+                        "Estrutura de sustentação de página"
+
+                    ];
+
+                    $quant = count($dados);
+                    
+                    ?>
+
+                    <p>
+                        <?php 
+
+                        for($i=0; $i<$quant; $i++){
+
+                            echo $dados[$i]." " .$descricao[$i]."<br>";
+
+                        }
+                        ?>
+
+
+
+
+
+
+
+                    </p>
 
                 </div>
             </div>
@@ -43,7 +128,7 @@
 
     </main>
     <!-- footer -->
-     <?php require_once '../componentes/footer.php'?>
+    <?php require_once APP_COMPONENTES . '/footer.php'; ?>
 
     <!-- Bootstrap JavaScript Bundle (includes Popper) -->
     <script

@@ -73,14 +73,13 @@
                              </div>
                             </div>
                             ';
-                            
                     }
 
                     ?>
 
                     <h4>For com array</h4>
 
-                    <?php 
+                    <?php
                     $dados = [
                         "PHP",
                         "MYSQL",
@@ -90,7 +89,7 @@
                         "HTML"
                     ];
 
-                    $descricao =[
+                    $descricao = [
                         "Linguagem de Programação",
                         "Banco de dados",
                         "Linguagem de Programação",
@@ -101,29 +100,41 @@
                     ];
 
                     $quant = count($dados);
-                    
+
                     ?>
 
                     <p>
-                        <?php 
+                        <?php
 
-                        for($i=0; $i<$quant; $i++){
+                        for ($i = 0; $i < $quant; $i++) {
 
-                            echo $dados[$i]." " .$descricao[$i]."<br>";
-
+                            echo $dados[$i] . " " . $descricao[$i] . "<br>";
                         }
                         ?>
 
-
-
-
-
-
-
                     </p>
 
+                    <h4>Desafio 1</h4>
+
+                    <h2>Contagem Progressiva com for</h2>
+
+                    <?php
+
+                    $nome = "Maria Souza";
+                    $idade = "18";
+
+                    ?>
+
+                  
+
+
+
+
+
                 </div>
+
             </div>
+
         </div>
 
     </main>

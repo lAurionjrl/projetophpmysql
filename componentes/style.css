@@ -1,0 +1,378 @@
+/* Navbar com gradiente sutil */
+.navbar {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    box-shadow: 0 2px 20px rgba(13, 110, 253, 0.15);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+/* Ícone da marca */
+.brand-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    font-size: 1.1rem;
+}
+
+/* Links da navbar */
+.nav-link {
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+}
+
+/* Dropdown moderno */
+.dropdown-menu {
+    min-width: 220px;
+    padding: 0.5rem 0;
+}
+
+.dropdown-item {
+    transition: all 0.15s ease;
+    font-weight: 500;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    transform: translateX(2px);
+}
+
+.dropdown-item i {
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Botão de ação rápida */
+.btn-light {
+    color: #0d6efd;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.btn-light:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Toggler sem borda */
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Animação do dropdown */
+.dropdown-menu {
+    animation: dropdownFade 0.2s ease;
+}
+
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+/* ===== HERO HEADER ===== */
+.hero-header {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 40%, #6610f2 100%);
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+/* Padrão de pontos no fundo */
+.hero-pattern {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.5;
+}
+
+/* Círculos decorativos */
+.hero-circle {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-circle-1 {
+    width: 400px;
+    height: 400px;
+    top: -150px;
+    right: -100px;
+}
+
+.hero-circle-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    left: -80px;
+}
+
+/* Efeito glassmorphism */
+.backdrop-blur {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Espaçamento extra em telas grandes */
+.py-lg-6 {
+    padding-top: 5rem !important;
+    padding-bottom: 6rem !important;
+}
+
+/* Animação de pulso no indicador */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Efeito hover nos botões */
+.hover-lift {
+    transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-3px);
+}
+
+/* Cards de estatísticas */
+.stat-card {
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.stat-number {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+/* Onda inferior */
+.hero-wave {
+    line-height: 0;
+}
+
+.hero-wave svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsividade */
+@media (max-width: 991.98px) {
+    .hero-header {
+        min-height: auto;
+    }
+    
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .display-3 {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+/* ===== FOOTER ===== */
+.footer-main {
+    background: linear-gradient(180deg, #1a1d29 0%, #0f111a 100%);
+    position: relative;
+}
+
+.footer-main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #0d6efd, #6610f2, #0d6efd);
+    background-size: 200% 100%;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Ícone da marca */
+.brand-icon-small {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    font-size: 1rem;
+}
+
+/* Links do footer */
+.footer-link {
+    transition: all 0.2s ease;
+    display: inline-block;
+    font-size: 0.95rem;
+}
+
+.footer-link:hover {
+    color: #fff !important;
+    transform: translateX(4px);
+}
+
+/* Botões sociais */
+.social-btn {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.social-btn:hover {
+    background: #0d6efd;
+    border-color: #0d6efd;
+    transform: translateY(-3px);
+}
+
+/* Input de newsletter */
+.form-control.bg-opacity-10 {
+    backdrop-filter: blur(4px);
+}
+
+.form-control.bg-opacity-10::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.form-control.bg-opacity-10:focus {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    color: #fff;
+}
+
+/* Barra inferior */
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 767.98px) {
+    .footer-main {
+        text-align: center;
+    }
+    
+    .footer-brand {
+        justify-content: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+
+
+
+/* ===== DASHBOARD ===== */
+
+/* Seção de boas-vindas */
+.welcome-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+}
+
+.welcome-bar {
+    border-left: 4px solid #0d6efd;
+}
+
+/* Cards do dashboard */
+.dashboard-card {
+    transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-top {
+    position: relative;
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    margin-top: -20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Ícones de atividade */
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dashboard-card {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.dashboard-card:nth-child(1) { animation-delay: 0.1s; }
+.dashboard-card:nth-child(2) { animation-delay: 0.2s; }
+.dashboard-card:nth-child(3) { animation-delay: 0.3s; }
+.dashboard-card:nth-child(4) { animation-delay: 0.4s; }
+.dashboard-card:nth-child(5) { animation-delay: 0.5s; }
+.dashboard-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Responsividade */
+@media (max-width: 767.98px) {
+    .welcome-section h2 {
+        font-size: 1.25rem;
+    }
+}

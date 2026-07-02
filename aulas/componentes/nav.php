@@ -33,11 +33,12 @@
                         </a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../aula1_variaveis/">Aula1 - Variáveis</a></li>
-                            <li><a class="dropdown-item" href="../aula2/">Aula2 - Operadores</a></li>
-                            <li><a class="dropdown-item" href="../aula3/">Aula3</a></li>
-                            <li><a class="dropdown-item" href="../aula4/">Aula4</a></li>
-                            <li><a class="dropdown-item" href="../aula5/">Aula5</a></li>
+                            <li><a class="dropdown-item" href="../aula1_variaveis/">Aula 1 - Variáveis</a></li>
+                            <li><a class="dropdown-item" href="../aula2/">Aula 2 - Operadores</a></li>
+                            <li><a class="dropdown-item" href="../aula3/">Aula 3 - Rotas</a></li>
+                            <li><a class="dropdown-item" href="../aula4/">Aula 4 - Condicional</a></li>
+                            <li><a class="dropdown-item" href="../aula5/">Aula 5 - For While</a></li>
+                            <li><a class="dropdown-item" href="../aula6/">Aula6 - Arrey</a></li>
                             
                         </ul>
                     </li>

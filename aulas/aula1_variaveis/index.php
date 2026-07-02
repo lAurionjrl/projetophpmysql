@@ -18,10 +18,14 @@
 
 <body>
 
-    <!-- nav -->
     <?php $numaula = "Aula 1-Variáveis";?> 
+    
+    <!-- nav -->
     <?php require_once APP_COMPONENTES. '/nav.php';?>
+
+    <!-- header -->
     <?php require_once APP_COMPONENTES. '/header.php';?>
+
 
     <main>
 
@@ -300,6 +304,7 @@
         </div>
 
       </main>
+      
     <!-- footer -->
     <?php require_once APP_COMPONENTES. '/footer.php';?>
 

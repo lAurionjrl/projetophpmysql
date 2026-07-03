@@ -13,16 +13,21 @@
 
                 <!-- Badge de status -->
                 <div class="mb-4" data-aos="fade-down">
-                    <span class="badge bg-white bg-opacity-20 text-white border border-white border-opacity-30 px-4 py-2 rounded-pill fw-medium backdrop-blur">
+                    <span class="badge bg-opacity-20 border border-white border-opacity-30 px-4 py-2 rounded-pill fw-medium backdrop-blur">
                         <span class="d-inline-block w-2 h-2 bg-success rounded-circle me-2 animate-pulse"></span>
-                        Sistema em operação
+                        <?php echo databr(); ?> <?php echo horabr(); ?>
                     </span>
                 </div>
 
                 <!-- Título principal -->
                 <h1 class="display-3 fw-bold text-white mb-4 lh-sm">
                     Controle de Estoque
+                    
                 </h1>
+
+                <?php echo $enc = encrypt_secure("123456",'e');?>
+
+                <?php echo $enc = encrypt_secure("$enc",'d'); ?>
 
                 <!-- Descrição -->
                 <p class="lead text-white text-opacity-75 mb-5 mx-auto" style="max-width: 560px;">
@@ -31,6 +36,8 @@
                     <span class="text-white fw-semibold">rápida</span> e 
                     <span class="text-white fw-semibold">eficiente</span>.
                 </p>
+
+                
 
                 <!-- Botões de ação -->
                 <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">

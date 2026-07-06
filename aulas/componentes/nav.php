@@ -39,6 +39,7 @@
                             <li><a class="dropdown-item" href="../aula4/">Aula 4 - Condicional</a></li>
                             <li><a class="dropdown-item" href="../aula5/">Aula 5 - For While</a></li>
                             <li><a class="dropdown-item" href="../aula6/">Aula6 - Arrey</a></li>
+                            <li><a class="dropdown-item" href="../aula7/">Aula7 - Config</a></li>
                             
                         </ul>
                     </li>

@@ -1,3 +1,4 @@
+<?php require_once dirname(__DIR__). '/componentes/config.php';?>
 <?php require_once dirname(__DIR__). '/componentes/rotas.php';?>
 <!doctype html>
 <html lang="en" data-bs-theme="light">
@@ -36,12 +37,113 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
+                    <h1>Padrões Config</h1>
+                    <h3>1.Data BR</h3>                    
+                    Data: <?php echo $data;?> <br>
+                    Hora: <?php echo $hora;?> <br>
+                    Data br <?php echo databr();?> <br>
+                    Hora br <?php echo horabr();?> <br>
 
-                    <?php
+                    <h3>Encrypt dados</h3>
+                    <?php $codigo ="123456";?>
+                    Código: <?php echo $codigo;?>
+                    <?php $enc = encrypt_secure($codigo,'e');?>
+                    Código encryptado:<?php echo $enc;?> <br>
+                    Código decryptado:<?php echo encrypt_secure($enc,'d');?> <br>
+
+                    <h3>Encrypt no link</h3>
+                    <a href="?enc=<?php echo urlencode($enc) ;?>">Chave encryptada</a><br>
+                    
+                        Código decryptado do link:
+                        <?php
+                        if(!empty($_GET['enc'])){
+                         echo encrypt_secure($_GET['enc'],'d');
+
+                        }
+
+                        ?>
+
+                        <h3>Encrypt dados</h3>
+                        <?php $codigo ="654987";?>
+                        Código: <?php echo $codigo;?>
+                        <?php $nome = encrypt_secure($codigo,'e');?>
+                        Código encryptado:<?php echo $nome;?> <br>
+                        Código decryptado:<?php echo encrypt_secure($nome,'d');?> <br>
+
+                        <h3>Encrypt no link</h3>
+                        <a href="?nome=<?php echo urlencode($nome) ;?>">Chave encryptada</a><br>
+                        
+                        Código decryptado do link:
+                        <?php
+                        if(!empty($_GET['nome'])){
+                         echo encrypt_secure($_GET['nome'],'d');
+
+                        }
+
+                        ?>
+
+
+                        <h3>Encrypt dados</h3>
+                        <?php $codigo ="000000";?>
+                        Código: <?php echo $codigo;?>
+                        <?php $Zero = encrypt_secure($codigo,'e');?>
+                        Código encryptado:<?php echo $Zero;?> <br>
+                        Código decryptado:<?php echo encrypt_secure($Zero,'d');?> <br>
+
+                        <h3>Encrypt no link</h3>
+                        <a href="?Zero=<?php echo urlencode($Zero) ;?>">Chave encryptada</a><br>
+                        
+                        Código decryptado do link:
+                        <?php
+                        if(!empty($_GET['Zero'])){
+                         echo encrypt_secure($_GET['Zero'],'d');
+
+                        }
+
+                        ?>
+
+                        <h3>Grupo com input text e botão</h3>
+
+                       <form method="post" class="card card-body shadow-sm mb-4">
+                        <h4>Input text + botão</h4>
+
+                        <label for="produto_busca" class="form-label">Nome do produto</label>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="produto_busca" name="busca" placeholder="Digite o nome do produto">
+                            <button type="submit" class="btn btn-primary">Pesquisar</button>
+                        </div>
+                    </form>
+
+                        <h3>Código Decripitado</h3>
+
+                        Código decryptado:
+                        <?php
+                        if(!empty($_POST['busca'])){
+                         $enex = encrypt_secure($_POST['busca'],'e');
+                         $deex = encrypt_secure($enex,'d');
+
+                        }
+                        
+                        ?>
+
+                     Chave Ecryptada <?= $enex; ?> <br>
+
+                     Chave Decrypitada <?= $deex; ?> <br>
+                         
+
+                        
+
+
+
+
+
+
+                    
 
 
                    
-                    ?>
+                    
 
                 </div>
             </div>

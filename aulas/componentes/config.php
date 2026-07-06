@@ -6,12 +6,11 @@ header('Content-Type: text/html; charset=utf-8');
 
 <?php
 setlocale(LC_ALL, "pt_BR", "pt_BR.iso-8859-1", "pt_BR.utf-8", "portuguese");
-
 date_default_timezone_set('America/Fortaleza');
-
 $hr = "0";
 $hora = date("H:i:s", time() - ($hr));
 $data = date("Y-m-d");
+
 ?>
 
 
@@ -64,6 +63,7 @@ function horabr($hora = null)
 
 
 <?php
+
 define('SESSION_TTL', 60 * 60 * 5);
 
 if (session_status() !== PHP_SESSION_ACTIVE) {
@@ -79,14 +79,17 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
     session_start();
 }
+
+
 ?>
 
 
 <?php
+
 function encrypt_secure($value, $action = 'e')
 {
-    $secret_key = 'junior';
-    $secret_iv = 'junior123';
+    $secret_key = 'mickey';
+    $secret_iv = 'pateta';
     $cipher = 'AES-256-CBC';
 
     $key = hash('sha256', $secret_key, true);
@@ -142,12 +145,11 @@ function encrypt_secure($value, $action = 'e')
 }
 
 // $enc = encrypt_secure("123456",'e');
-// $enc = encrypt_secure("$enc",'d');
-
+// $dec = encrypt_secure($enc,'d');
 ?>
 
 
-<?php 
+<?php
 
 function gerachave()
 {
@@ -174,9 +176,11 @@ function gerachave()
     return $rand;
 }
 
+
 ?>
 
-<?php 
+
+<?php
 
 function gerachaveshorttag()
 {
@@ -195,9 +199,12 @@ function gerachaveshorttag()
     return $rand;
 }
 
+
 ?>
 
-<?php 
+
+<?php
+
 
 function somardias($data, $dias)
 {
@@ -207,11 +214,13 @@ function somardias($data, $dias)
     return $datanew->format('Y-m-d');
 }
 
+//$vencimento = somardias('2026-07-02', 20);
+
+
 ?>
 
 
-<?php 
-
+<?php
 
 function diferencadedata($data, $hora)
 {
@@ -226,9 +235,11 @@ function diferencadedata($data, $hora)
     return $seg;
 }
 
+//$difrenca =diferencadedata('2026-07-02', $hora)
+
 ?>
 
-<?php 
+<?php
 
 function gerarChaveUnica($tamanho = 8)
 {
@@ -237,4 +248,28 @@ function gerarChaveUnica($tamanho = 8)
 
 $chave = gerarChaveUnica();
 
+
+
+?>
+
+<?php
+function pegarIp(): string
+{
+    $keys = [
+        'HTTP_CF_CONNECTING_IP',
+        'HTTP_X_FORWARDED_FOR',
+        'REMOTE_ADDR'
+    ];
+    foreach ($keys as $key) {
+        if (!empty($_SERVER[$key])) {
+            $ip = trim((string) $_SERVER[$key]);
+            if ($key === 'HTTP_X_FORWARDED_FOR') {
+                $partes = explode(',', $ip);
+                $ip = trim($partes[0]);
+            }
+            return mb_substr($ip, 0, 45, 'UTF-8');
+        }
+    }
+    return 'IP não identificado';
+}
 ?>

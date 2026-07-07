@@ -1,3 +1,5 @@
+<?php require_once dirname(__DIR__). '/componentes/config.php';?>
+<?php require_once dirname(__DIR__). '/componentes/rotas.php';?>
 <!doctype html>
 <html lang="en" data-bs-theme="light">
 

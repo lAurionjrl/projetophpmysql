@@ -40,6 +40,7 @@
                             <li><a class="dropdown-item" href="../aula5/">Aula 5 - For While</a></li>
                             <li><a class="dropdown-item" href="../aula6/">Aula6 - Arrey</a></li>
                             <li><a class="dropdown-item" href="../aula7/">Aula7 - Config</a></li>
+                            <li><a class="dropdown-item" href="../aula8/">Aula8 - Session</a></li>
                             
                         </ul>
                     </li>

@@ -13,6 +13,27 @@ $data = date("Y-m-d");
 
 ?>
 
+<?php
+
+define('SESSION_TTL', 60 * 60 * 5);
+
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    ini_set('session.gc_maxlifetime', (string) SESSION_TTL);
+    ini_set('session.cookie_lifetime', (string) SESSION_TTL);
+
+    session_set_cookie_params([
+        'path'     => '/',
+        'secure'   => (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'),
+        'httponly' => true,
+        'samesite' => 'Lax',
+    ]);
+
+    session_start();
+}
+
+
+?>
+
 
 <?php
 
@@ -62,26 +83,7 @@ function horabr($hora = null)
 ?>
 
 
-<?php
 
-define('SESSION_TTL', 60 * 60 * 5);
-
-if (session_status() !== PHP_SESSION_ACTIVE) {
-    ini_set('session.gc_maxlifetime', (string) SESSION_TTL);
-    ini_set('session.cookie_lifetime', (string) SESSION_TTL);
-
-    session_set_cookie_params([
-        'path'     => '/',
-        'secure'   => (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'),
-        'httponly' => true,
-        'samesite' => 'Lax',
-    ]);
-
-    session_start();
-}
-
-
-?>
 
 
 <?php

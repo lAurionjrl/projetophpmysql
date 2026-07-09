@@ -1,3 +1,26 @@
+<?php require_once dirname(__DIR__) . '/componentes/config.php'; ?>
+
+<?php
+
+if(!empty($_GET['logout']) && $_GET['logout']=="ok") {
+
+   $_SESSION = [];
+   session_destroy();
+   header('Location:paineladmin.php');
+    exit();
+
+
+
+}
+
+if (empty($_SESSION['userstatus'])) {
+    header('Location:index.php');
+    exit();
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -14,6 +37,28 @@
 </head>
 
 <body class="bg-light">
+
+    
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Deseja Sair ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <a href="?logout=ok" class="btn btn-primary">Confirmar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -47,7 +92,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-danger">
+                        <a href="?logout=ok" data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-link text-danger">
                             <i class="bi bi-box-arrow-right"></i> Sair
                         </a>
                     </li>

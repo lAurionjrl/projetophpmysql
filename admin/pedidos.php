@@ -23,7 +23,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="assets/style.css">
-    
+
 </head>
 
 <body>
@@ -87,151 +87,15 @@
 
             <div class="row g-3 mb-4">
                 <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card border-0 shadow-sm card-stat h-100">
-                        <div class="card-body d-flex align-items-center justify-content-between">
-                            <div>
-                                <span class="text-muted small fw-medium text-uppercase">Total de Produtos</span>
-                                <h3 class="fw-bold my-1">1.248</h3>
-                                <span class="text-success small fw-medium"><i class="bi bi-arrow-up-short"></i>+3.4%</span>
-                                <span class="text-muted small"> vs mês anterior</span>
-                            </div>
-                            <div class="icon-shape bg-primary-subtle text-primary">
-                                <i class="bi bi-box fs-4"></i>
-                            </div>
-                        </div>
-                    </div>
+                    Conteudo aqui
                 </div>
 
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card border-0 shadow-sm card-stat h-100">
-                        <div class="card-body d-flex align-items-center justify-content-between">
-                            <div>
-                                <span class="text-muted small fw-medium text-uppercase">Itens em Estoque</span>
-                                <h3 class="fw-bold my-1">8.590</h3>
-                                <span class="text-success small fw-medium"><i class="bi bi-arrow-up-short"></i>+1.2%</span>
-                                <span class="text-muted small"> vs mês anterior</span>
-                            </div>
-                            <div class="icon-shape bg-info-subtle text-info">
-                                <i class="bi bi-boxes fs-4"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card border-0 shadow-sm card-stat h-100">
-                        <div class="card-body d-flex align-items-center justify-content-between">
-                            <div>
-                                <span class="text-muted small fw-medium text-uppercase">Estoque Baixo</span>
-                                <h3 class="fw-bold text-warning my-1">37</h3>
-                                <span class="text-danger small fw-medium"><i class="bi bi-arrow-up-short"></i>+8.2%</span>
-                                <span class="text-muted small"> em risco crítico</span>
-                            </div>
-                            <div class="icon-shape bg-warning-subtle text-warning">
-                                <i class="bi bi-exclamation-triangle fs-4"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card border-0 shadow-sm card-stat h-100">
-                        <div class="card-body d-flex align-items-center justify-content-between">
-                            <div>
-                                <span class="text-muted small fw-medium text-uppercase">Sem Estoque</span>
-                                <h3 class="fw-bold text-danger my-1">12</h3>
-                                <span class="text-success small fw-medium"><i class="bi bi-arrow-down-short"></i>-4.3%</span>
-                                <span class="text-muted small"> itens zerados</span>
-                            </div>
-                            <div class="icon-shape bg-danger-subtle text-danger">
-                                <i class="bi bi-x-circle fs-4"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card border-0 shadow-sm card-stat h-100">
-                        <div class="card-body d-flex align-items-center justify-content-between">
-                            <div>
-                                <span class="text-muted small fw-medium text-uppercase">Entradas (Mês)</span>
-                                <h3 class="fw-bold my-1">420</h3>
-                                <span class="text-success small fw-medium"><i class="bi bi-arrow-up-short"></i>+15.3%</span>
-                                <span class="text-muted small"> novos lotes</span>
-                            </div>
-                            <div class="icon-shape bg-success-subtle text-success">
-                                <i class="bi bi-cloud-arrow-up fs-4"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card border-0 shadow-sm card-stat h-100">
-                        <div class="card-body d-flex align-items-center justify-content-between">
-                            <div>
-                                <span class="text-muted small fw-medium text-uppercase">Saídas (Mês)</span>
-                                <h3 class="fw-bold my-1">385</h3>
-                                <span class="text-success small fw-medium"><i class="bi bi-arrow-up-short"></i>+5.8%</span>
-                                <span class="text-muted small"> pedidos expedidos</span>
-                            </div>
-                            <div class="icon-shape bg-secondary-subtle text-secondary">
-                                <i class="bi bi-cloud-arrow-down fs-4"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card border-0 shadow-sm card-stat h-100">
-                        <div class="card-body d-flex align-items-center justify-content-between">
-                            <div>
-                                <span class="text-muted small fw-medium text-uppercase">Valor em Patrimônio</span>
-                                <h3 class="fw-bold my-1">R$ 286.450</h3>
-                                <span class="text-success small fw-medium"><i class="bi bi-arrow-up-short"></i>+2.5%</span>
-                                <span class="text-muted small"> capital imobilizado</span>
-                            </div>
-                            <div class="icon-shape bg-success-subtle text-success">
-                                <i class="bi bi-currency-dollar fs-4"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card border-0 shadow-sm card-stat h-100">
-                        <div class="card-body d-flex align-items-center justify-content-between">
-                            <div>
-                                <span class="text-muted small fw-medium text-uppercase">Fornecedores Ativos</span>
-                                <h3 class="fw-bold my-1">84</h3>
-                                <span class="text-muted small">Nenhuma alteração</span>
-                            </div>
-                            <div class="icon-shape bg-dark-subtle text-dark">
-                                <i class="bi bi-truck-flatbed fs-4"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            <div class="row g-4">
-                <div class="col-12 col-xl-8">
-                    <div class="card border-0 shadow-sm p-4">
-                        <h5 class="fw-bold mb-3">Movimentações de Estoque (Últimos 6 meses)</h5>
-                        <div style="position: relative; height: 300px;">
-                            <canvas id="chartMovimentacoes"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-xl-4">
-                    <div class="card border-0 shadow-sm p-4">
-                        <h5 class="fw-bold mb-3">Distribuição por Categoria</h5>
-                        <div style="position: relative; height: 300px;">
-                            <canvas id="chartCategorias"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </main>
 
         <!-- footer -->
@@ -313,8 +177,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
-    
+
+
 </body>
 
 </html>

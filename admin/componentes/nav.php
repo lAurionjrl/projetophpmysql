@@ -37,7 +37,7 @@ if(!empty($_GET['nav'])) {
                     </a>
                     <div class="collapse submenu" id="submenuEstoque">
                         <ul class="nav flex-column ps-2">
-                            <li><a href="produtos_editar?nav=2.php" class="nav-link">Movimentações</a></li>
+                            <li><a href="produtos_editar.php?nav=2" class="nav-link">Movimentações</a></li>
                             <li><a href="entrada_estoque.php?nav=2" class="nav-link">Entrada de estoque</a></li>
                             <li><a href="saida_estoque.php?nav=2" class="nav-link">Saída de estoque</a></li>
                             <li><a href="produtos_relatorios?nav=2" class="nav-link">Inventário</a></li>
@@ -46,18 +46,18 @@ if(!empty($_GET['nav'])) {
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="clientes_cadastro.php" class="nav-link">
                         <i class="bi bi-box-arrow-in-right me-3"></i><span class="sidebar-text">Entradas</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="clientes_editar.php" class="nav-link">
                         <i class="bi bi-box-arrow-left me-3"></i><span class="sidebar-text">Saídas</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="clientes.php" class="nav-link">
                         <i class="bi bi-people me-3"></i><span class="sidebar-text">Clientes</span>
                     </a>
                 </li>
@@ -81,17 +81,17 @@ if(!empty($_GET['nav'])) {
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="" class="nav-link">
                         <i class="bi bi-person-gear me-3"></i><span class="sidebar-text">Usuários</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="admin_configuracoes.php" class="nav-link">
                         <i class="bi bi-gear me-3"></i><span class="sidebar-text">Configurações</span>
                     </a>
                 </li>
                 <li class="nav-item mt-4 border-top">
-                    <a href="#" class="nav-link text-danger">
+                    <a href="sair.php" class="nav-link text-danger">
                         <i class="bi bi-box-arrow-right me-3"></i><span class="sidebar-text">Sair</span>
                     </a>
                 </li>

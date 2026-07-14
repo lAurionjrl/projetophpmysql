@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 define('BASEPATH', true);
 header('Content-Type: text/html; charset=utf-8');
@@ -147,7 +148,7 @@ function encrypt_secure($value, $action = 'e')
 ?>
 
 
-<?php 
+<?php
 
 function gerachave()
 {
@@ -176,7 +177,7 @@ function gerachave()
 
 ?>
 
-<?php 
+<?php
 
 function gerachaveshorttag()
 {
@@ -197,7 +198,7 @@ function gerachaveshorttag()
 
 ?>
 
-<?php 
+<?php
 
 function somardias($data, $dias)
 {
@@ -210,7 +211,7 @@ function somardias($data, $dias)
 ?>
 
 
-<?php 
+<?php
 
 
 function diferencadedata($data, $hora)
@@ -228,7 +229,7 @@ function diferencadedata($data, $hora)
 
 ?>
 
-<?php 
+<?php
 
 function gerarChaveUnica($tamanho = 8)
 {
@@ -238,3 +239,13 @@ function gerarChaveUnica($tamanho = 8)
 $chave = gerarChaveUnica();
 
 ?>
+
+<?php
+
+if (!isset($_SESSION['adminstatus']) || $_SESSION['adminstatus'] !== true) {
+    header('Location: ../index.php');
+    exit;
+}
+
+?>
+

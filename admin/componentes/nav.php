@@ -19,34 +19,34 @@ if(!empty($_GET['nav'])) {
                     <div class="collapse submenu" id="submenuProdutos">
                         <ul class="nav flex-column ps-2">
                             <li><a href="produtos.php?nav=1" class="nav-link">Listar produtos</a></li>
-                            <li><a href="produtoscadastro.php?nav=1" class="nav-link">Novo produto</a></li>
+                            <li><a href="produtos_cadastro.php?nav=1" class="nav-link">Novo produto</a></li>
                             <li><a href="estoque.php?nav=1" class="nav-link">Estoque </a></li>
                         </ul>
                     </div>
                 </li>
 
                 <li class="nav-item">
-                    <a href="categorias.php" class="nav-link">
+                    <a href="categorias.php?nav=2"<?= $nav==2?'active':'';?> class="nav-link">
                         <i class="bi bi-tags me-3"></i><span class="sidebar-text">Categorias</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="#submenuEstoque"<?= $nav==2?'active':'';?> class="nav-link dropdown-toggle" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="submenuEstoque">
+                    <a href="#submenuEstoque"<?= $nav==3?'active':'';?> class="nav-link dropdown-toggle" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="submenuEstoque">
                         <i class="bi bi-houses me-3"></i><span class="sidebar-text">Estoque</span>
                     </a>
                     <div class="collapse submenu" id="submenuEstoque">
                         <ul class="nav flex-column ps-2">
-                            <li><a href="produtos_editar.php?nav=2" class="nav-link">Movimentações</a></li>
-                            <li><a href="entrada_estoque.php?nav=2" class="nav-link">Entrada de estoque</a></li>
-                            <li><a href="saida_estoque.php?nav=2" class="nav-link">Saída de estoque</a></li>
-                            <li><a href="produtos_relatorios?nav=2" class="nav-link">Inventário</a></li>
+                            <li><a href="produtos_editar.php?nav=3" class="nav-link">Movimentações</a></li>
+                            <li><a href="entrada_estoque.php?nav=3" class="nav-link">Entrada de estoque</a></li>
+                            <li><a href="saida_estoque.php?nav=3" class="nav-link">Saída de estoque</a></li>
+                            <li><a href="produtos_relatorios?nav=3" class="nav-link">Inventário</a></li>
                         </ul>
                     </div>
                 </li>
 
                 <li class="nav-item">
-                    <a href="clientes_cadastro.php" class="nav-link">
+                    <a href="clientes_cadastro.php?nav=4"<?= $nav==4?'active':'';?> class="nav-link">
                         <i class="bi bi-box-arrow-in-right me-3"></i><span class="sidebar-text">Entradas</span>
                     </a>
                 </li>
@@ -73,7 +73,7 @@ if(!empty($_GET['nav'])) {
                     </a>
                     <div class="collapse submenu" id="submenuRelatorios">
                         <ul class="nav flex-column ps-2">
-                            <li><a href="produtos_relatorios" class="nav-link">Vendas</a></li>
+                            <li><a href="admin_cadastro.php" class="nav-link">Vendas</a></li>
                             <li><a href="#" class="nav-link">Perdas</a></li>
                             <li><a href="#" class="nav-link">Curva ABC</a></li>
                         </ul>
@@ -81,7 +81,7 @@ if(!empty($_GET['nav'])) {
                 </li>
 
                 <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="admin_editar" class="nav-link">
                         <i class="bi bi-person-gear me-3"></i><span class="sidebar-text">Usuários</span>
                     </a>
                 </li>

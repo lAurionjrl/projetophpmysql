@@ -238,3 +238,10 @@ function gerarChaveUnica($tamanho = 8)
 $chave = gerarChaveUnica();
 
 ?>
+
+<?php 
+
+// $con = config::connect();
+
+
+?>

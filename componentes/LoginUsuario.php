@@ -1,13 +1,6 @@
 <?php
 require_once 'config.php';
-
-if(!empty($_POST['email'])&&!empty($_POST['senha'])) {
-
-echo$_POST['email'];
-echo$_POST['senha'];
-
-}
-
+require_once 'conexao.php';
 
 ?>
 
@@ -28,7 +21,7 @@ if (
     exit;
 }
 
-$login = filter_input(INPUT_POST, 'login', FILTER_SANITIZE_EMAIL);
+$login = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $senha = $_POST['senha'] ?? '';
 
 $login = trim((string) $login);
@@ -44,10 +37,21 @@ if ($login === '' || $senha === '') {
     exit;
 }
 
-$loginCorreto = 'admin@admin.com';
-$senhaCorreta = '123456';
+$con = config::connect();  //abre a conexão
+$sql = "SELECT  id, email, nome, senha, nivel 
+        FROM usuarios WHERE email ='$login' AND senha='$senha'";
+$stmt = $con->query($sql);
+$dados = $stmt->fetch(PDO::FETCH_ASSOC);
 
-if ($login !== $loginCorreto || $senha !== $senhaCorreta) {
+$loginCorreto = $dados['email']??'0';
+$senhaCorreta = $dados['senha']??'0';
+
+$decs = encrypt_secure($senhaCorreta,'d');
+
+
+
+
+if ($login !== $loginCorreto || $senha !== $senha !== $decs) {
     http_response_code(401);
 
     echo json_encode([
@@ -60,9 +64,10 @@ if ($login !== $loginCorreto || $senha !== $senhaCorreta) {
 session_regenerate_id(true);
 
 $_SESSION['adminstatus'] = true;
-$_SESSION['admin_nome'] = 'Administrador';
+$_SESSION['admin_nome'] = $dados['nome'];
+$_SESSION['admin_nivel'] = $dados['nivel'];
 $_SESSION['admin_email'] = $login;
-$_SESSION['id_admin'] = "123";
+$_SESSION['id_admin'] = encrypt_secure($dados['id'],'e');
 
 echo json_encode([
     'sucesso' => true,

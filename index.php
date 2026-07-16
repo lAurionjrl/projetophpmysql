@@ -133,7 +133,7 @@ if(!empty($_SESSION['adiminstatus'])) {
 
                 <div id="mensagemLogin" class="alert d-none"></div>
 
-                <form id="loginForm" novalidate>
+                <form id="loginForm" >
 
                     <div class="mb-3">
                         <label for="email" class="form-label fw-medium text-secondary small">E-mail corporativo</label>
@@ -145,6 +145,7 @@ if(!empty($_SESSION['adiminstatus'])) {
                                 type="email"
                                 class="form-control"
                                 id="email"
+                                name="email"
                                 placeholder="nome@empresa.com"
                                 aria-describedby="email-addon emailFeedback"
                                 required
@@ -168,6 +169,7 @@ if(!empty($_SESSION['adiminstatus'])) {
                                 type="password"
                                 class="form-control"
                                 id="password"
+                                name="senha"
                                 placeholder="Sua senha de acesso"
                                 aria-describedby="password-addon passwordFeedback"
                                 required
@@ -193,10 +195,7 @@ if(!empty($_SESSION['adiminstatus'])) {
                         </label>
                     </div>
 
-                    <div class="alert alert-danger d-none" id="loginAlert" role="alert">
-                        <i class="bi bi-exclamation-triangle-fill me-2" aria-hidden="true"></i>
-                        <span id="alertMessage">Usuário ou senha incorretos. Tente novamente.</span>
-                    </div>
+                   
 
                     <button type="submit" class="btn btn-primary w-100 py-2.5 fw-semibold d-flex align-items-center justify-content-center" id="submitBtn">
                         <span id="btnText">Entrar no sistema</span>
@@ -339,9 +338,9 @@ if(!empty($_SESSION['adiminstatus'])) {
     </script>
 
     <script>
-        const formLogin = document.getElementById('formLogin');
+        const formLogin = document.getElementById('loginForm');
         const mensagemLogin = document.getElementById('mensagemLogin');
-        const btnEntrar = document.getElementById('btnEntrar');
+        const btnEntrar = document.getElementById('submitBtn');
 
         formLogin.addEventListener('submit', async function(event) {
             event.preventDefault();

@@ -40,8 +40,8 @@
                     </a>
 
                     <a class="btn btn-warning btn-sm"
-                        href="action.php?senhaUser=@jr123456">
-                        Senha de Usuário: @jr123456
+                        href="action.php?senhaUser=123456">
+                        Senha de Usuário: 123456
                     </a>
 
                     <p>
@@ -69,6 +69,7 @@
                     </p>
 
                     Senha Decrypitada:
+
                     <p>
                         <?php
                         if (!empty($_SESSION['senhaUser'])) {

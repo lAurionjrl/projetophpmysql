@@ -129,6 +129,9 @@ if(!empty($_SESSION['adiminstatus'])) {
                     </div>
                     <h1 class="h3 fw-bold text-dark mb-1">StockControl</h1>
                     <p class="text-muted small">Gerenciamento inteligente de estoque</p>
+                    <?php echo $enc =  encrypt_secure("123456",'e');              ?>
+                    <br>
+                    <?php echo encrypt_secure($enc,'d');              ?>
                 </div>
 
                 <div id="mensagemLogin" class="alert d-none"></div>

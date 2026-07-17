@@ -39,7 +39,7 @@ if ($login === '' || $senha === '') {
 
 $con = config::connect();  //abre a conexão
 $sql = "SELECT  id, email, nome, senha, nivel 
-        FROM usuarios WHERE email ='$login' AND senha='$senha'";
+        FROM usuarios WHERE email ='$login'";
 $stmt = $con->query($sql);
 $dados = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -51,12 +51,12 @@ $decs = encrypt_secure($senhaCorreta,'d');
 
 
 
-if ($login !== $loginCorreto || $senha !== $senha !== $decs) {
+if ($login !== $loginCorreto || $decs !== $senha ) {
     http_response_code(401);
 
     echo json_encode([
         'sucesso' => false,
-        'mensagem' => 'Login ou senha inválidos.'
+        'mensagem' => 'Login ou senha inválidos.1.'.$login.'2.'.$senhaCorreta.''
     ]);
     exit;
 }

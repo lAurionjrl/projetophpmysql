@@ -1,5 +1,7 @@
 <?php require_once __DIR__ . '/componentes/config.php'; ?>
 <?php require_once __DIR__ . '/componentes/rotas.php'; ?>
+<?php require_once __DIR__ . '/componentes/conexao.php'; ?>
+<?php require_once __DIR__ . '/query/query_produtos.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-BR" data-bs-theme="light">
 
@@ -88,6 +90,41 @@
             <div class="row g-3 mb-4">
                 <div class="col-12 col-sm-6 col-xl-3">
                     Conteudo aqui
+                </div>
+
+                <div class="container mt-4">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover align-middle">
+                            <thead class="table-dark">
+                               
+                                <tr>
+                                    <th scope="col">nr</th>
+                                    <th scope="col">Produto</th>
+                                    <th scope="col">Categoria</th>
+                                    <th scope="col">Preço</th>
+                                    <th scope="col">estoque</th>
+                                    <th scope="col" class="text-center">Ação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                 <?php foreach($dados as $produtos){ ?>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td><?= $produtos['nome']?></td>
+                                    <td><?= $produtos['categoria']?></td>
+                                    <td><?= $produtos['preco']?></td>
+                                    <td><?= $produtos['estoque']?></td>                                    
+                                    <?php $encId = encrypt_secure($produtos['id'],'e');?>
+                                    <td class="text-center">
+                                        <!-- Botões links (tags <a>) -->
+                                        <a href="produto_editar.php" class="btn btn-primary btn-sm me-2">Editar</a>
+                                        <a href="#excluir" class="btn btn-danger btn-sm">Excluir</a>
+                                    </td>
+                                    <?php echo $produtos['nome'];} ?>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
 

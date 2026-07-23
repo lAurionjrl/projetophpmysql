@@ -43,7 +43,7 @@
             <div class="d-flex align-items-center gap-3">
                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Foto do Administrador" class="rounded-circle" width="45" height="45">
                 <div>
-                    <h6 class="mb-0 text-truncate fw-semibold" style="max-width: 150px;">Junior Lima</h6>
+                    <h6 class="mb-0 text-truncate fw-semibold" style="max-width: 150px;">Aurinon Junior</h6>
                     <small class="text-muted">Administrador</small>
                 </div>
             </div>

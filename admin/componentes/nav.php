@@ -39,8 +39,8 @@ if(!empty($_GET['nav'])) {
                         <ul class="nav flex-column ps-2">
                             <li><a href="produtos_editar.php?nav=3" class="nav-link">Movimentações</a></li>
                             <li><a href="entrada_estoque.php?nav=3" class="nav-link">Entrada de estoque</a></li>
-                            <li><a href="saida_estoque.php?nav=3" class="nav-link">Saída de estoque</a></li>
-                            <li><a href="produtos_relatorios?nav=3" class="nav-link">Inventário</a></li>
+                            <li><a href="saidas_estoque.php?nav=3" class="nav-link">Saída de estoque</a></li>
+                            <li><a href="#" class="nav-link">Inventário</a></li>
                         </ul>
                     </div>
                 </li>
@@ -62,7 +62,7 @@ if(!empty($_GET['nav'])) {
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="produtos_relatorios.php?nav=4" class="nav-link">
                         <i class="bi bi-cart me-3"></i><span class="sidebar-text">Pedidos</span>
                     </a>
                 </li>

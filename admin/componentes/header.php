@@ -39,10 +39,10 @@
                 <div class="dropdown">
                     <button class="btn btn-link d-flex align-items-center gap-2 text-decoration-none p-0 dropdown-toggle text-body" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="" class="rounded-circle" width="32" height="32">
-                        <span class="d-none d-md-inline small fw-medium">Junior Lima</span>
+                        <span class="d-none d-md-inline small fw-medium">Aurinon Junior</span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end shadow">
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i> Meu perfil</a></li>
+                        <li><a class="dropdown-item" href="admin_editar.php"><i class="bi bi-person me-2"></i> Meu perfil</a></li>
                         <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i> Configurações</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right me-2"></i> Sair</a></li>
